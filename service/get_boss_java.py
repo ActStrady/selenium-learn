@@ -15,7 +15,12 @@ from selenium import webdriver
 # 获取驱动
 from selenium.webdriver.common.keys import Keys
 
-driver = webdriver.Chrome()
+# chrome无界面
+options = webdriver.ChromeOptions()
+options.add_argument('--headless')
+options.add_argument('--disable-gpu')
+# 获取驱动
+driver = webdriver.Chrome(options=options)
 # 执行请求 boss直聘
 driver.get('https://www.zhipin.com/')
 # 获取页面所有信息
