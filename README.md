@@ -19,3 +19,10 @@
     - find_element_by_tag_name：通过标签名查找
     - find_element_by_class_name：通过CLASS查找
     - find_element_by_css_selector：通过css选择器查找
+- 点击，输入
+    1. 点击： `click`
+    2. 清空： `clear`
+    3. 输入： `send_keys`, 注：selenium的Keys类里包括了很多键盘的键，如Keys.RETURN，是回车
+    4. 执行js: `execute_script`。 因为Selenium并未提供所有的页面交互操作方法，例如爬虫中用得最多的下拉页面（用于加载更多内容）。Selenium提供了execute_script()方法，用于执行JS，这样我们就可以通过JS代码实现
+这些操作了。
+    
